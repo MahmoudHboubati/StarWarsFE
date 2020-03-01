@@ -1,8 +1,9 @@
 body {
   margin: 0;
   font-family: "Roboto", sans-serif, "Segoe UI", "Oxygen", "Ubuntu", "Cantarell",
-    "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+  "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
   font-size: 16px;
+  color: white;
   background-color: #000;
 }
 
