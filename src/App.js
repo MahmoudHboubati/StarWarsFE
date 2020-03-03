@@ -3,21 +3,24 @@ import logo from './logo.svg';
 import './App.css';
 import AmazingButtons from './components/AmazingButtons';
 import StarWarsInformation from './components/StarWarsInformation';
+import { Provider } from './context';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-      </header>
+    <Provider>
+      <div className="App">
+        <header className="App-header">
+          <img src={logo} className="App-logo" alt="logo" />
+        </header>
 
-      <AmazingButtons></AmazingButtons>
+        <AmazingButtons></AmazingButtons>
 
-      <br />
+        <br />
 
-      <StarWarsInformation></StarWarsInformation>
-      
-    </div>
+        <StarWarsInformation></StarWarsInformation>
+
+      </div>
+    </Provider>
   );
 }
 

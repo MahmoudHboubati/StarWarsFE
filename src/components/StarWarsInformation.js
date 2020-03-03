@@ -1,17 +1,25 @@
-import React, { Component } from 'react'
+import React, { Component, Fragment } from 'react'
+import StarWarsInformationDetail from './StarWarsInformationDetail';
+import { Consumer } from '../context';
 
 class StarWarsInformation extends Component {
     render() {
         return (
-            <div>
-                <div class="questions-section">
-                    <div class="question-answer">
-                        <div class="question">What character (person) appeared in the most of StarWars films?</div>
-                        <div id="mostAppearedAnswer" class="answer">Some answer</div>
-                    </div>
-                </div>
-            </div>
-        )
+            <Consumer>
+                {value => {
+                    const details = value.details;
+                    return (
+                        <Fragment>
+                            {details.map(detail => (
+                                <StarWarsInformationDetail
+                                    key={detail.id}
+                                    question={detail.question} />
+                            ))}
+                        </Fragment>
+                    );
+                }}
+            </Consumer>
+        );
     }
 }
 
