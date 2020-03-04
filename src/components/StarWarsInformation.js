@@ -1,6 +1,6 @@
 import React, { Component, Fragment } from 'react'
 import StarWarsInformationDetail from './StarWarsInformationDetail';
-import { Consumer } from '../context';
+import { Consumer } from '../store/context';
 
 class StarWarsInformation extends Component {
     render() {

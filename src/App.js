@@ -3,9 +3,10 @@ import logo from './logo.svg';
 import './App.css';
 import AmazingButtons from './components/AmazingButtons';
 import StarWarsInformation from './components/StarWarsInformation';
-import { Provider } from './context';
+import { Provider } from './store/context';
 
 function App() {
+
   return (
     <Provider>
       <div className="App">

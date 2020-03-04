@@ -1,14 +1,13 @@
 import React, { Component } from 'react';
+import { reducer } from './reducer';
 
 const Context = React.createContext();
 
 export class Provider extends Component {
 
     state = {
-        details: [{
-            id: 1,
-            question: "What character (person) appeared in the most of StarWars films?"
-        }]
+        details: [],
+        dispatch: action => this.setState(state => reducer(state, action))
     };
 
     render() {
@@ -20,4 +19,4 @@ export class Provider extends Component {
     }
 }
 
-export const Consumer = Context.Consumer; 
+export const Consumer = Context.Consumer;

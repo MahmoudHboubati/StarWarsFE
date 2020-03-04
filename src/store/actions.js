@@ -1,0 +1,3 @@
+export const actions = {
+    LOAD_MOST_APPEARED_PERSON: 'LOAD_MOST_APPEARED_PERSON'
+}
