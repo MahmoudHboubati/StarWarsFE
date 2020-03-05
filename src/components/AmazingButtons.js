@@ -6,8 +6,8 @@ import { actions } from '../store/actions';
 
 class AmazingButtons extends Component {
 
-    onAmazingClick = (dispatch, details) => {
-        if (details.length)
+    onAmazingClick = (dispatch, questions) => {
+        if (questions.length)
             dispatch({
                 desired: actions.ERASE_QUESTIONS
             });
@@ -19,12 +19,12 @@ class AmazingButtons extends Component {
         return (
             <Consumer>
                 {value => {
-                    const { dispatch, details } = value;
-                    const pressedClass = details.length ? "btn-pressed" : "";
+                    const { dispatch, questions } = value;
+                    const pressedClass = questions.length ? "btn-pressed" : "";
                     return (
                         <button
                             className={`btn-amazing ${pressedClass}`}
-                            onClick={this.onAmazingClick.bind(this, dispatch, details)}>
+                            onClick={this.onAmazingClick.bind(this, dispatch, questions)}>
                             <img src={starImage} className="star" alt="*" />
                             Do. Or do not. There is no try.
                             <img src={starImage} className="star" alt="*" />

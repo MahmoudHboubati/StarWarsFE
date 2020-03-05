@@ -6,7 +6,7 @@ const Context = React.createContext();
 export class Provider extends Component {
 
     state = {
-        details: [],
+        questions: [],
         dispatch: action => this.setState(state => reducer(state, action)),
     };
 

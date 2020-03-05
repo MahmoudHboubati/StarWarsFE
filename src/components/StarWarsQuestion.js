@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 
-class StarWarsInformationDetail extends Component {
+class StarWarsQuestion extends Component {
     render() {
 
         let { question, answer } = this.props;
@@ -14,4 +14,4 @@ class StarWarsInformationDetail extends Component {
     }
 }
 
-export default StarWarsInformationDetail;
+export default StarWarsQuestion;
