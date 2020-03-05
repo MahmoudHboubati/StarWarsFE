@@ -1,33 +1,35 @@
 import React, { Component } from 'react'
 import starImage from '../star.svg';
-import axios from 'axios';
-import { config } from '../config';
 import { Consumer } from '../store/context';
-import { actions } from '../store/actions'; 
+import apiServices from '../store/ApiServices';
+import { actions } from '../store/actions';
 
 class AmazingButtons extends Component {
 
-    //update the state
-    onAmazingClick = (dispatch) => {
-        axios.get(config.urls.starWars.people.API_URL_MOST_APPEARED_PERSON)
-            .then(res => dispatch({ desired: actions.LOAD_MOST_APPEARED_PERSON, payload: res.data }));
+    onAmazingClick = (dispatch, details) => {
+        if (details.length)
+            dispatch({
+                desired: actions.ERASE_QUESTIONS
+            });
+        else
+            apiServices.loadMostAppearedPerson(dispatch);
     }
 
     render() {
         return (
             <Consumer>
                 {value => {
-                    const { dispatch } = value;
+                    const { dispatch, details } = value;
+                    const pressedClass = details.length ? "btn-pressed" : "";
                     return (
-                        <div>
-                            <button className="btn-amazing"
-                                onClick={this.onAmazingClick.bind(this, dispatch)}>
-                                <img src={starImage} className="star" alt="logo" />
-                                Do. Or do not. There is no try.
-                                <img src={starImage} className="star" alt="logo" />
-                                <div className="shiny"></div>
-                            </button>
-                        </div>
+                        <button
+                            className={`btn-amazing ${pressedClass}`}
+                            onClick={this.onAmazingClick.bind(this, dispatch, details)}>
+                            <img src={starImage} className="star" alt="*" />
+                            Do. Or do not. There is no try.
+                            <img src={starImage} className="star" alt="*" />
+                            <div className="shiny"></div>
+                        </button>
                     );
                 }}
             </Consumer>

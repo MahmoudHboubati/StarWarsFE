@@ -12,7 +12,6 @@ function App() {
       <div className="App">
         <Header></Header>
         <AmazingButtons></AmazingButtons>
-        <br />
         <StarWarsInformation></StarWarsInformation>
       </div>
     </Provider>

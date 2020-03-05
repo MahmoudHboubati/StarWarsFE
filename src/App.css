@@ -25,7 +25,6 @@
 
 .btn-amazing {
   position: relative;
-  top: 0;
 
   background: #ffe81f;
   border-radius: 5px;
@@ -39,9 +38,6 @@
   border: none;
   outline: none;
   cursor: pointer;
-  vertical-align: middle;
-
-  box-sizing: border-box;
 }
 
 .btn-amazing:hover {
@@ -49,7 +45,8 @@
   top: 6px;
   box-shadow: 0 8px 0 0 #c2ae00;
 }
-.btn-amazing:active {
+.btn-amazing:active,
+.btn-amazing.btn-pressed {
   color: #0000003f;
   background: #e4d86d;
   top: 10px;
@@ -61,7 +58,8 @@
   margin: 0 15px;
 }
 
-.btn-amazing:active img.star {
+.btn-amazing:active img.star,
+.btn-amazing.btn-pressed img.star {
   filter: opacity(0.2);
 }
 
@@ -80,7 +78,8 @@
   margin-bottom: -8px;
 }
 
-.btn-amazing:active .shiny {
+.btn-amazing:active .shiny,
+.btn-amazing.btn-pressed .shiny {
   margin-bottom: -4px;
 }
 
@@ -88,8 +87,16 @@
 
 /* question | answer style */
 
-.answer {
-  color:  #ffe81f;
+.question-answer {
+  margin: 50px 0px;
+  font-size: 23px;
 }
 
+.answer {
+  color: #ffe81f;
+}
+
+.questions-section {
+  margin: 50px 0px;
+}
 /* question | answer style ends */

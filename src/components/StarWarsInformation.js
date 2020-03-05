@@ -1,4 +1,4 @@
-import React, { Component, Fragment } from 'react'
+import React, { Component } from 'react'
 import StarWarsInformationDetail from './StarWarsInformationDetail';
 import { Consumer } from '../store/context';
 
@@ -9,13 +9,14 @@ class StarWarsInformation extends Component {
                 {value => {
                     const details = value.details;
                     return (
-                        <Fragment>
+                        <div className="questions-section">
                             {details.map(detail => (
                                 <StarWarsInformationDetail
                                     key={detail.id}
-                                    question={detail.question} />
+                                    question={detail.question}
+                                    answer={detail.answer} />
                             ))}
-                        </Fragment>
+                        </div>
                     );
                 }}
             </Consumer>
