@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import starImage from '../star.svg';
+import starImage from './../resources/star.svg';
 import { Consumer } from '../store/context';
 import apiServices from '../store/ApiServices';
 import { actions } from '../store/actions';
