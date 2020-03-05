@@ -13,7 +13,7 @@ body {
 }
 
 .App-logo {
-  height: 30vmin;
+  height: 32vmin;
   pointer-events: none;
 }
 
@@ -106,3 +106,27 @@ body {
   margin: 50px 0px;
 }
 /* question | answer style ends */
+
+/* smartphones */
+@media (max-width: 500px) {
+  body{
+    font-size: 14px;
+  }
+  .btn-amazing {
+    height: 4em;
+    padding: 10px 10px;
+    font-size: 1em;
+    width: 90%;
+  }
+
+  .question-answer {
+    margin: 40px 0px;
+    font-size: 1em;
+    padding: 0 10px;
+  }
+
+  .btn-amazing img.star {
+    width: 1.1rem;
+    margin: 0 5px;
+  }
+}
