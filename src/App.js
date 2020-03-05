@@ -1,5 +1,4 @@
 import React from 'react';
-import './App.css';
 import AmazingButtons from './components/AmazingButtons';
 import StarWarsQuestions from './components/StarWarsQuestions';
 import { Provider } from './store/context';
