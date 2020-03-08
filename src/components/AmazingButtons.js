@@ -4,6 +4,7 @@ import { Consumer } from '../store/context';
 import apiServices from '../store/services/ApiServices';
 import { actions } from '../store/actions';
 import filmServiceApi from '../store/services/FilmServiceApi';
+import planetServiceApi from '../store/services/PlanetServiceApi';
 
 class AmazingButtons extends Component {
 
@@ -16,6 +17,7 @@ class AmazingButtons extends Component {
             apiServices.loadMostAppearedPerson(dispatch);
             apiServices.loadMostAppearedInSpecies(dispatch);
             filmServiceApi.loadLongestOpeningCrawl(dispatch);
+            planetServiceApi.loadLargestVehiclePilot(dispatch);
         }
     }
 
