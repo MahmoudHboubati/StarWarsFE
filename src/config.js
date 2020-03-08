@@ -7,7 +7,8 @@ const prod = {
         {
             people: { API_URL_MOST_APPEARED_PERSON: PROD_BASE_API_URL + '/people/getMostAppeared' },
             species: { API_URL_MOST_APPEARED_IN_SPECIES: PROD_BASE_API_URL + '/species/getMostAppeared' },
-            film: { API_URL_LONGEST_OPENING_CRAWL: PROD_BASE_API_URL + '/film/getLongestOpeningCrawl' }
+            film: { API_URL_LONGEST_OPENING_CRAWL: PROD_BASE_API_URL + '/film/getLongestOpeningCrawl' },
+            planet: { API_URL_LARGEST_VEHICLE_PILOT: PROD_BASE_API_URL + '/planet/getLargestVehiclePilot' }
         }
     }
 }
@@ -18,7 +19,8 @@ const dev = {
         {
             people: { API_URL_MOST_APPEARED_PERSON: DEV_BASE_API_URL + '/people/getMostAppeared' },
             species: { API_URL_MOST_APPEARED_IN_SPECIES: DEV_BASE_API_URL + '/species/getMostAppeared' },
-            film: { API_URL_LONGEST_OPENING_CRAWL: DEV_BASE_API_URL + '/film/getLongestOpeningCrawl' }
+            film: { API_URL_LONGEST_OPENING_CRAWL: DEV_BASE_API_URL + '/film/getLongestOpeningCrawl' },
+            planet: { API_URL_LARGEST_VEHICLE_PILOT: DEV_BASE_API_URL + '/planet/getLargestVehiclePilot' }
         }
     }
 };
