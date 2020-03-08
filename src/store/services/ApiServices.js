@@ -1,6 +1,6 @@
 import axios from 'axios';
-import { config } from '../config';
-import { actions } from './actions';
+import { config } from '../../config';
+import { actions } from '../actions';
 
 class ApiServices {
     loadMostAppearedPerson(dispatch) {
