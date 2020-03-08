@@ -11,8 +11,11 @@ class AmazingButtons extends Component {
             dispatch({
                 desired: actions.ERASE_QUESTIONS
             });
-        else
+        else {
             apiServices.loadMostAppearedPerson(dispatch);
+            apiServices.loadMostAppearedInSpecies(dispatch);
+
+        }
     }
 
     render() {

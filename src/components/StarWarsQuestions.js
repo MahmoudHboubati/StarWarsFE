@@ -12,7 +12,7 @@ class StarWarsQuestions extends Component {
                         <div className="questions-section">
                             {questions.map(question => (
                                 <StarWarsQuestion
-                                    key={question.id}
+                                    key={question.idKey}
                                     question={question.question}
                                     answer={question.answer} />
                             ))}

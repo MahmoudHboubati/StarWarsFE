@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import Answer from './Answer';
 
 class StarWarsQuestion extends Component {
     render() {
@@ -8,7 +9,7 @@ class StarWarsQuestion extends Component {
         return (
             <div className="question-answer">
                 <div className="question">{question}</div>
-                <div id="mostAppearedAnswer" className="answer">{answer}</div>
+                <Answer answer={answer}></Answer>
             </div>
         )
     }
