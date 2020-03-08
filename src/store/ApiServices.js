@@ -15,7 +15,6 @@ class ApiServices {
         const question = "What species appeared in the most number of StarWars films?";
         axios.get(config.urls.starWars.species.API_URL_MOST_APPEARED_IN_SPECIES)
             .then(res => {
-                console.log(res);
                 dispatch({
                     desired: actions.LOAD_MOST_APPEARED_IN_SPECIES,
                     payload: { ...res.data, question: question, answer: res.data }

@@ -13,11 +13,13 @@ export default class Answer extends Component {
     }
 
     asArray(answer) {
-        return (<div>{answer.map(ans => (
-            <div className="answer">
-                <span>{ans.name} ({ans.count})</span>
-            </div>
-        ))}</div>);
+        return (
+            <div>{answer.map((ans, index) => (
+                <div className="answer" key={index}>
+                    <span>{ans.name} ({ans.count})</span>
+                </div>
+            ))}
+            </div>);
     }
 
     asPlainText(answer) {
