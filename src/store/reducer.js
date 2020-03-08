@@ -5,6 +5,9 @@ export const reducer = (state, action) => {
         case actions.LOAD_MOST_APPEARED_PERSON:
             state.questions.push(action.payload);
             return state;
+        case actions.LOAD_MOST_APPEARED_IN_SPECIES:
+            state.questions.push(action.payload);
+            return state;
         case actions.ERASE_QUESTIONS:
             state.questions = [];
             return state;

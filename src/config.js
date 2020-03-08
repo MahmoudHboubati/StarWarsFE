@@ -5,7 +5,8 @@ const prod = {
     urls: {
         starWars:
         {
-            people: { API_URL_MOST_APPEARED_PERSON: PROD_BASE_API_URL + '/people/getMostAppeared' }
+            people: { API_URL_MOST_APPEARED_PERSON: PROD_BASE_API_URL + '/people/getMostAppeared' },
+            species: { API_URL_MOST_APPEARED_IN_SPECIES: PROD_BASE_API_URL + '/species/getMostAppeared' }
         }
     }
 }
@@ -14,7 +15,8 @@ const dev = {
     urls: {
         starWars:
         {
-            people: { API_URL_MOST_APPEARED_PERSON: DEV_BASE_API_URL + '/people/getMostAppeared' }
+            people: { API_URL_MOST_APPEARED_PERSON: DEV_BASE_API_URL + '/people/getMostAppeared' },
+            species: { API_URL_MOST_APPEARED_IN_SPECIES: DEV_BASE_API_URL + '/species/getMostAppeared' }
         }
     }
 };

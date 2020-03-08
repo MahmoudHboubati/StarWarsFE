@@ -10,9 +10,9 @@ class StarWarsQuestions extends Component {
                     const questions = value.questions;
                     return (
                         <div className="questions-section">
-                            {questions.map(question => (
+                            {questions.map((question, index) => (
                                 <StarWarsQuestion
-                                    key={question.id}
+                                    key={index}
                                     question={question.question}
                                     answer={question.answer} />
                             ))}
