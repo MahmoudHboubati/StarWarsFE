@@ -1,17 +1,17 @@
 import axios from 'axios';
 import { config } from '../../config';
 import { actions } from '../actions';
+import constants from './constants';
 
 export class PlanetServiceApi {
     loadLargestVehiclePilot(dispatch) {
-        const question = "What planet in Star Wars universe provided largest number of vehicle pilots?";
         axios.get(config.urls.starWars.planet.API_URL_LARGEST_VEHICLE_PILOT)
             .then(res => {
                 dispatch({
                     desired: actions.LOAD_LARGEST_VEHICLE_PILOT,
                     payload: {
                         ...res.data,
-                        question: question,
+                        question: constants.questions.LARGEST_VEHICLE_PILOT,
                         answer: this.resolver(res.data)
                     }
                 });

@@ -1,10 +1,11 @@
 import axios from 'axios';
 import { config } from '../../config';
 import { actions } from '../actions';
+import constants from './constants';
 
 export class FilmServiceApi {
     loadLongestOpeningCrawl(dispatch) {
-        const question = "Which of all Star Wars movies has the longest opening crawl?";
+        const question = constants.questions.LONGEST_OPENING_CRAWL;
         axios.get(config.urls.starWars.film.API_URL_LONGEST_OPENING_CRAWL)
             .then(res => {
                 dispatch({
