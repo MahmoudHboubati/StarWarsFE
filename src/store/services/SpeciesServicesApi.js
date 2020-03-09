@@ -2,7 +2,7 @@ import axios from 'axios';
 import { config } from '../../config';
 import { actions } from '../actions';
 
-class ApiServices {
+class SpeciesServicesApi {
     loadMostAppearedInSpecies(dispatch) {
         const question = "What species appeared in the most number of StarWars films?";
         axios.get(config.urls.starWars.species.API_URL_MOST_APPEARED_IN_SPECIES)
@@ -19,5 +19,5 @@ class ApiServices {
     }
 }
 
-const apiServices = new ApiServices();
-export default apiServices;
+const speciesServicesApi = new SpeciesServicesApi();
+export default speciesServicesApi;

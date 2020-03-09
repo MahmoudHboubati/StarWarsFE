@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import starImage from './../resources/star.svg';
 import { Consumer } from '../store/context';
 import { actions } from '../store/actions';
-import apiServices from '../store/services/ApiServices';
 import filmServiceApi from '../store/services/FilmServiceApi';
 import planetServiceApi from '../store/services/PlanetServiceApi';
 import peopleServiceApi from '../store/services/PeopleServiceApi';
+import speciesServicesApi from '../store/services/SpeciesServicesApi';
 
 class AmazingButtons extends Component {
 
@@ -16,7 +16,7 @@ class AmazingButtons extends Component {
             });
         else {
             peopleServiceApi.loadMostAppearedPerson(dispatch);
-            apiServices.loadMostAppearedInSpecies(dispatch);
+            speciesServicesApi.loadMostAppearedInSpecies(dispatch);
             filmServiceApi.loadLongestOpeningCrawl(dispatch);
             planetServiceApi.loadLargestVehiclePilot(dispatch);
         }
