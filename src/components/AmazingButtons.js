@@ -1,10 +1,11 @@
 import React, { Component } from 'react'
 import starImage from './../resources/star.svg';
 import { Consumer } from '../store/context';
-import apiServices from '../store/services/ApiServices';
 import { actions } from '../store/actions';
+import apiServices from '../store/services/ApiServices';
 import filmServiceApi from '../store/services/FilmServiceApi';
 import planetServiceApi from '../store/services/PlanetServiceApi';
+import peopleServiceApi from '../store/services/PeopleServiceApi';
 
 class AmazingButtons extends Component {
 
@@ -14,7 +15,7 @@ class AmazingButtons extends Component {
                 desired: actions.ERASE_QUESTIONS
             });
         else {
-            apiServices.loadMostAppearedPerson(dispatch);
+            peopleServiceApi.loadMostAppearedPerson(dispatch);
             apiServices.loadMostAppearedInSpecies(dispatch);
             filmServiceApi.loadLongestOpeningCrawl(dispatch);
             planetServiceApi.loadLargestVehiclePilot(dispatch);

@@ -7,23 +7,22 @@ export class PlanetServiceApi {
         const question = "What planet in Star Wars universe provided largest number of vehicle pilots?";
         axios.get(config.urls.starWars.planet.API_URL_LARGEST_VEHICLE_PILOT)
             .then(res => {
-                let maxPilotCount = Math.max.apply(Math, res.data.map(a => a.count));
-                let answer = {
-                    items: res.data.filter(a => a.count === maxPilotCount),
-                    resolver: this.resolver
-                };
                 dispatch({
                     desired: actions.LOAD_LONGEST_OPENING_CRAWL,
                     payload: {
                         ...res.data,
                         question: question,
-                        answer: answer
+                        answer: this.resolver(res.data)
                     }
                 });
             });
     }
-    resolver(answerItem) {
-        return `Planet: ${answerItem.planetName} - Pilots: (${answerItem.count}) ${answerItem.pilots}`;
+
+    resolver(data) {
+        return data
+            .sort((a, b) => b.count - a.count)
+            .filter((a, i) => i === 0)
+            .map(a => `Planet: ${a.planetName} - Pilots: (${a.count}) ${a.pilots}`);
     }
 }
 
