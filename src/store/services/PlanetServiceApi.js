@@ -5,12 +5,12 @@ import constants from './constants';
 
 export class PlanetServiceApi {
     loadLargestVehiclePilot(dispatch) {
+        dispatch({ desired: actions.ADD_LOADING_A_QUESTION });
         axios.get(config.urls.starWars.planet.API_URL_LARGEST_VEHICLE_PILOT)
             .then(res => {
                 dispatch({
-                    desired: actions.LOAD_LARGEST_VEHICLE_PILOT,
+                    desired: actions.LARGEST_VEHICLE_PILOT_LOADED,
                     payload: {
-                        ...res.data,
                         question: constants.questions.LARGEST_VEHICLE_PILOT,
                         answer: this.resolver(res.data)
                     }

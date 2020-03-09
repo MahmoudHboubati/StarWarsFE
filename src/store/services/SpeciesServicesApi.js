@@ -5,12 +5,15 @@ import constants from './constants';
 
 class SpeciesServicesApi {
     loadMostAppearedInSpecies(dispatch) {
-        const question = constants.questions.MOST_APPEARED_IN_SPECIES;
+        dispatch({ desired: actions.ADD_LOADING_A_QUESTION });
         axios.get(config.urls.starWars.species.API_URL_MOST_APPEARED_IN_SPECIES)
             .then(res => {
                 dispatch({
-                    desired: actions.LOAD_MOST_APPEARED_IN_SPECIES,
-                    payload: { ...res.data, question: question, answer: this.resolver(res.data) }
+                    desired: actions.MOST_APPEARED_IN_SPECIES_LOADED,
+                    payload: {
+                        question: constants.questions.MOST_APPEARED_IN_SPECIES,
+                        answer: this.resolver(res.data)
+                    }
                 });
             });
     };

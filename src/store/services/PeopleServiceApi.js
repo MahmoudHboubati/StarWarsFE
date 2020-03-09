@@ -5,11 +5,11 @@ import constants from './constants';
 
 class PeopleServicesApi {
     loadMostAppearedPerson(dispatch) {
+        dispatch({ desired: actions.ADD_LOADING_A_QUESTION });
         axios.get(config.urls.starWars.people.API_URL_MOST_APPEARED_PERSON)
             .then(res => dispatch({
-                desired: actions.LOAD_MOST_APPEARED_PERSON,
+                desired: actions.MOST_APPEARED_PERSON_LOADED,
                 payload: {
-                    ...res.data,
                     question: constants.questions.MOST_APPEARED_PERSON,
                     answer: [res.data.name]
                 }

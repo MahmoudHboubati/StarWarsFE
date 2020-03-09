@@ -9,16 +9,18 @@ import speciesServicesApi from '../store/services/SpeciesServicesApi';
 
 class AmazingButtons extends Component {
 
-    onAmazingClick = (dispatch, questions) => {
+    onAmazingClick = (dispatch, questions, loading) => {
         if (questions.length)
             dispatch({
                 desired: actions.ERASE_QUESTIONS
             });
         else {
-            peopleServiceApi.loadMostAppearedPerson(dispatch);
-            speciesServicesApi.loadMostAppearedInSpecies(dispatch);
-            filmServiceApi.loadLongestOpeningCrawl(dispatch);
-            planetServiceApi.loadLargestVehiclePilot(dispatch);
+            if (!loading) {
+                peopleServiceApi.loadMostAppearedPerson(dispatch);
+                speciesServicesApi.loadMostAppearedInSpecies(dispatch);
+                filmServiceApi.loadLongestOpeningCrawl(dispatch);
+                planetServiceApi.loadLargestVehiclePilot(dispatch);
+            }
         }
     }
 
@@ -26,16 +28,19 @@ class AmazingButtons extends Component {
         return (
             <Consumer>
                 {value => {
-                    const { dispatch, questions } = value;
-                    const pressedClass = questions.length ? "btn-pressed" : "";
+                    const { dispatch, questions, loading } = value;
+                    const pressedClass = questions.length | loading ? "btn-pressed" : "";
                     return (
                         <button
                             className={`btn-amazing ${pressedClass}`}
-                            onClick={this.onAmazingClick.bind(this, dispatch, questions)}>
+                            onClick={this.onAmazingClick.bind(this, dispatch, questions, loading)}
+                            onDoubleClick={() => console.log("on double click")}
+                                >
                             <img src={starImage} className="star" alt="*" />
                             Do. Or do not. There is no try.
                             <img src={starImage} className="star" alt="*" />
                             <div className="shiny"></div>
+                            {loading}
                         </button>
                     );
                 }}
