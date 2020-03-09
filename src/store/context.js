@@ -7,6 +7,7 @@ export class Provider extends Component {
 
     state = {
         questions: [],
+        loading: 0,
         dispatch: action => this.setState(state => reducer(state, action)),
     };
 
