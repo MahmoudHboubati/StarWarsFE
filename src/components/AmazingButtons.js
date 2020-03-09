@@ -40,7 +40,6 @@ class AmazingButtons extends Component {
                             Do. Or do not. There is no try.
                             <img src={starImage} className="star" alt="*" />
                             <div className="shiny"></div>
-                            {loading}
                         </button>
                     );
                 }}
