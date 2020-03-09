@@ -8,7 +8,7 @@ export class PlanetServiceApi {
         axios.get(config.urls.starWars.planet.API_URL_LARGEST_VEHICLE_PILOT)
             .then(res => {
                 dispatch({
-                    desired: actions.LOAD_LONGEST_OPENING_CRAWL,
+                    desired: actions.LOAD_LARGEST_VEHICLE_PILOT,
                     payload: {
                         ...res.data,
                         question: question,
