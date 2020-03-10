@@ -4,6 +4,10 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 This application is deployed on [Heroku](https://heroku.com) using github pipeline, you can access the application on [StarWars](https://starwars-doordont.herokuapp.com/)
 
+## Responsive Design
+
+For now only minimum media query was added to the style which makes it reasonable in mobile size screens.
+
 ## Available Scripts
 
 In the project directory, you can run:
