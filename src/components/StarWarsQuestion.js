@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import Answer from './Answer';
+import PropTypes from 'prop-types';
 
 class StarWarsQuestion extends Component {
     render() {
@@ -14,5 +15,10 @@ class StarWarsQuestion extends Component {
         )
     }
 }
+
+StarWarsQuestion.propTypes = {
+    answer: PropTypes.array.isRequired,
+    question: PropTypes.string.isRequired
+};
 
 export default StarWarsQuestion;

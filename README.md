@@ -1,12 +1,4 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
-
-## Application Info
-
-This application is deployed on [Heroku](https://heroku.com) using github pipeline, you can access the application on [StarWars](https://starwars-doordont.herokuapp.com/)
-
-## Responsive Design
-
-For now only minimum media query was added to the style which makes it reasonable in mobile size screens.
+# This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app)
 
 ## Available Scripts
 
@@ -34,3 +26,16 @@ The build is minified and the filenames include the hashes.<br />
 Your app is ready to be deployed!
 
 See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+
+## eslint
+
+run following to auto fix and get problems using eslint/eslint-plugin-react:
+`eslint --fix --ignore-path .gitignore .`
+
+## Application Info
+
+This application is deployed on [Heroku](https://heroku.com) using github pipeline, you can access the application on [StarWars](https://starwars-doordont.herokuapp.com/)
+
+## Responsive Design
+
+For now only minimum media query was added to the style which makes it reasonable in mobile size screens.
