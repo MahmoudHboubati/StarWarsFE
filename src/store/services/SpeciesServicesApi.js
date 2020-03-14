@@ -16,7 +16,7 @@ class SpeciesServicesApi {
                     }
                 });
             });
-    };
+    }
 
     resolver(data) {
         return data.map(a => `${a.name} (${a.count})`);

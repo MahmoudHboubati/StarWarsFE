@@ -7,7 +7,7 @@ class StarWarsQuestions extends Component {
         return (
             <Consumer>
                 {value => {
-                    const questions = value.questions;
+                    const { questions } = value;
                     return (
                         <div className="questions-section">
                             {questions.map((question, index) => (

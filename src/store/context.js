@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { reducer } from './reducer';
+import PropTypes from 'prop-types';
 
 const Context = React.createContext();
 
@@ -20,4 +21,8 @@ export class Provider extends Component {
     }
 }
 
-export const Consumer = Context.Consumer;
+Provider.propTypes = {
+    children: PropTypes.object.isRequired
+};
+
+export const {Consumer} = Context;

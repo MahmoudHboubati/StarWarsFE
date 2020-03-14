@@ -14,7 +14,7 @@ class PeopleServicesApi {
                     answer: [res.data.name]
                 }
             }));
-    };
+    }
 }
 
 const peopleServiceApi = new PeopleServicesApi();
